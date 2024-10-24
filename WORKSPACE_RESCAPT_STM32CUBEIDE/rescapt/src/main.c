@@ -1,8 +1,8 @@
 #include "main.h"
 
 //###################################################################
-#define VL6180X_PRESS_HUM_TEMP 1
-#define MPU9250	0
+#define VL6180X_PRESS_HUM_TEMP 0
+#define MPU9250	1
 #define DYN_ANEMO 0
 //###################################################################
 

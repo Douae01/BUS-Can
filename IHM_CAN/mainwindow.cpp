@@ -289,10 +289,10 @@ void MainWindow::onRefresh_Tick()
     // Timer dédié à l'envoi périodique de demandes CAN
     switch (sendTurn) {
     case 0:
-        sendOrder(0x01);  // Demande pour l'anémomètre (ID 3)
+        sendOrder(0x01);  // Demande pour la carte ID_1
         break;
     case 1:
-        sendOrder(0x03);  // Demande pour la carte ID_1
+        sendOrder(0x03);  // Demande pour l'anémomètre (ID 3)
         break;
     default:
         break;
@@ -328,7 +328,7 @@ void MainWindow::setupTimers()
     // Timer pour envoyer des requêtes aux cartes ID_1 et ID_3
     refreshTimer = new QTimer(this);
     connect(refreshTimer, &QTimer::timeout, this, &MainWindow::onRefresh_Tick);
-    refreshTimer->start(30); 
+    refreshTimer->start(40); 
 }
 
 

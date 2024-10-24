@@ -16,7 +16,7 @@
 #include "MadgwickAHRS.h"
 //---------------------------------------------------------------------------------------------------
 // Definitions
-#define sampleFreq	180.0f		// sample frequency in Hz
+#define sampleFreq	90.0f		// sample frequency in Hz
 #define betaDef		0.02f		// 2 * proportional gain
 //---------------------------------------------------------------------------------------------------
 // Variable definitions
