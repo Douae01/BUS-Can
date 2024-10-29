@@ -22,12 +22,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     void openCANPort();
-    void sendCANMessage();
     void receiveCANMessage();
     void handleAnemometerData(const scpp::CanFrame& fr);
     void handleLuxTempHumData(const scpp::CanFrame& fr);
-    void handleAccelerometerData(const scpp::CanFrame& fr);  // Nouvelle fonction pour gérer l'accéléromètre
-    void handleMotorData(const scpp::CanFrame& fr);          // Nouvelle fonction pour gérer le moteur
     void handleOtherSensorData(const scpp::CanFrame& fr);
     void handleAccelData(const scpp::CanFrame& fr);
     void handleGyroData(const scpp::CanFrame& fr);
@@ -54,7 +51,6 @@ private:
     QTimer *timer_tick;       // Timer principal (général)
     QTimer *accelTimer;       // Timer pour l'accéléromètre
     QTimer *refreshTimer;     // Timer pour les cartes ID_1 et ID_3
-
 
     ObjectOpenGL *Object_GL;
     Ui::MainWindow *ui;
